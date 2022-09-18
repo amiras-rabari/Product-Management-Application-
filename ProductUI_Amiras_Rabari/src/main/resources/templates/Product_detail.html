@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div th:insert = "index ::indexHeader"></div>
+<P th:text = "${retrievedProduct.id}"/> 
+<P th:text = "${retrievedProduct.name}"/> 
+<P th:text = "${retrievedProduct.model}"/> 
+<P th:text = "${retrievedProduct.manufacturerName}"/> 
+
+</body>
+</html>

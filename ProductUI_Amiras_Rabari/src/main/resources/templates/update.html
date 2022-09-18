@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div th:insert = "index ::indexHeader"></div>
+<form th:action="@{/updateProduct/{id}(id=${product.id})}"  method  = "post" th:object = "${product}">
+
+<label> Product id</label><br>
+<input  type = "text"  th:field = "${product.id}" readonly="readonly"><br>
+
+<label> Product name</label><br>
+<input  type = "text"  th:field = "${product.name}"><br>
+
+<label> Product Model</label><br>
+<input  type = "text"  th:field = "${product.model}"><br>
+
+<label> Manufacturer name</label><br>
+<input  type = "text"  th:field = "${product.manufacturerName}"><br>
+
+<input type = submit>
+</form>
+
+
+</body>
+</html>
